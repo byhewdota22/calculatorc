@@ -1,11 +1,30 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
 public class calculatorc {
     public static void main(String[] args) {
-        System.out.println("hello world");
-
-        for (int i = 1; i <= 8; i++) {
-            System.out.println("i = " + i);// увше
+        double num1;
+        double num2;
+        double ans;
+        char op;
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Enter two numbers: ");
+        num1 = reader.nextDouble();
+        num2 = reader.nextDouble();
+        System.out.print("\nEnter an operator (+, -, *, /): ");
+        op = reader.next().charAt(0);
+        switch(op) {
+            case '+': ans = num1 + num2;
+                break;
+            case '-': ans = num1 - num2;
+                break;
+            case '*': ans = num1 * num2;
+                break;
+            case '/': ans = num1 / num2;
+                break;
+            default:  System.out.printf("Error! Enter correct operator");
+                return;
         }
+        System.out.print("\nThe result is given as follows:\n");
+        System.out.printf(num1 + " " + op + " " + num2 + " = " + ans);
     }
-}
+        }
+
